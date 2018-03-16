@@ -39,8 +39,11 @@ function runBot(options){ // add 'practice_test': boolean
 			question_text = $(value).find('.question_'+question_id+'question_text').text().trim();
 		if(options['first_time'] === true){
 			// console.log('FIRST TIME THROUGH');
-			var answer_id = $(this).find('.answer_input > input')[0].value;
-			$('#question_'+question_id+'_answer_'+answer_id).click().attr('checked','checked');
+			var input = $(value).find('.answer_input > input')[0];
+			if(input) {
+				var answer_id = input.value;
+				$('#question_'+question_id+'_answer_'+answer_id).click().attr('checked','checked');
+			}
 		} else if(qidInAnswerkey(question_id)){
 			// console.log('QUESTION ID IS IN ANSWER KEY');
 			for(var i=0; i<answer_key.length; i++){
