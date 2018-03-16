@@ -43,7 +43,16 @@ function runBot(options){ // add 'practice_test': boolean
 			if(input) {
 				var answer_id = input.value;
 				$('#question_'+question_id+'_answer_'+answer_id).click().attr('checked','checked');
+			} else {
+				//We have a matching choice!
+				$(value).find('.answer > div > select').each(function(index, select){
+					var firstOption = $(select).find('option')[1].value; //index 0 is always '[ Choose ]'
+					$(select).val(firstOption).change();
+				});
+				
 			}
+			
+			
 		} else if(qidInAnswerkey(question_id)){
 			// console.log('QUESTION ID IS IN ANSWER KEY');
 			for(var i=0; i<answer_key.length; i++){
