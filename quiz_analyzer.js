@@ -40,7 +40,10 @@ var create_and_push = function (obj, incorrect) {
 var update_answer = function (obj, incorrect) {
 	for (var i = 0; i < answer_key.length; i++) {
 		var curr_ans = answer_key[i];
-		if(curr_ans.q_id == obj.q_id){
+		if(curr_ans.is_matching){
+			continue;
+		}
+		if (curr_ans.q_id == obj.q_id) {
 			answer_key[i].a_id = obj.a_id;
 			answer_key[i].a_text = obj.a_text;
 			if (!curr_ans.correct) {
