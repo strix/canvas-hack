@@ -54,8 +54,8 @@ function runBot(options){ // add 'practice_test': boolean
 					} else{
 						// console.log('IN BUT NOT CORRECT FIND ONE THAT WORKS');
 						var alreadySelected = false;
-						$(this).find('.answer_input > input').each(function(){
-							var answer_id = $(this).attr('value');
+						$(value).find('.answer_input > input').each(function(){
+							var answer_id = $(value).attr('value');
 							if(!wrongAnswer(question_id, answer_id) && !alreadySelected){
 								$('#question_'+question_id+'_answer_'+answer_id).click().attr('checked','checked');
 								alreadySelected = true;
