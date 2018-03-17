@@ -135,6 +135,22 @@ var setupCyborg = function () {
 };
 
 // Main
-var Main = function(){
+var Main = function (max, min) {
+    console.log("Setting up cyborg.");
+    setupCyborg();
+    questions = getAllQuestions();
+    if (max && min) {
+        cyborg.setDelayInSeconds(max, min);
+    }
+    console.log("Setup complete.")
+    var answer_key = localStorageExists() ? retrieveAnswerKey() : undefined;
+    if (!answer_key) {
+        console.error("No answer key detected. Exiting...");
+        return;
+    }
+    cyborg.run();
+
     // TODO: Main program execution.
 };
+
+Main();
