@@ -16,6 +16,23 @@ var injectJquery = function () {
     head.appendChild(script);
 };
 
+var retrieveAnswerKey = function () {
+    return JSON.parse(localStorage.getItem('answerKey'));
+};
+
+var localStorageExists = function () {
+    var a_key = retrieveAnswerKey();
+    if (typeof a_key !== "undefined" && a_key && a_key.length > 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+var qidInAnswerkey = function (qid) {
+    return answer_key.filter(function (item) {
+        return qid === item.q_id;
+    })[0];
 };
 
 var getAllQuestions = function () {
